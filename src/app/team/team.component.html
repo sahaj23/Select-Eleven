@@ -1,0 +1,44 @@
+<br /><br />
+<h1 style="text-align: center;" *ngIf="batsmen.length > 0">Batsmen<br /></h1>
+<div class="row" style="margin-left: 40px;">
+  <app-team-player
+    *ngFor="let player of batsmen; let i = index"
+    [player]="player"
+    [id]="i"
+    class="col-md-4"
+  ></app-team-player>
+</div>
+<hr *ngIf="batsmen.length > 0" />
+<h1 style="text-align: center;" *ngIf="wickteKeeper.length > 0">
+  Wicketkeeper <br />
+</h1>
+<div class="row" style="margin-left: 40px;">
+  <app-team-player
+    *ngFor="let player of wickteKeeper; let i = index"
+    [player]="player"
+    [id]="i"
+    class="col-md-4"
+  ></app-team-player>
+</div>
+<hr *ngIf="wickteKeeper.length > 0" />
+<h1 style="text-align: center;" *ngIf="allRounders.length > 0">
+  All-rounders <br />
+</h1>
+<div class="row" style="margin-left: 40px;">
+  <app-team-player
+    *ngFor="let player of allRounders; let i = index"
+    [player]="player"
+    [id]="i"
+    class="col-md-4"
+  ></app-team-player>
+</div>
+<div *ngIf="allRounders.length > 0"></div>
+<h1 style="text-align: center;" *ngIf="bowlers.length > 0">Bowlers <br /></h1>
+<div class="row" style="margin-left: 40px;">
+  <app-team-player
+    *ngFor="let player of bowlers; let i = index"
+    [player]="player"
+    [id]="i"
+    class="col-md-4"
+  ></app-team-player>
+</div>

@@ -1,0 +1,63 @@
+.containe {
+  text-align: center;
+  background-image: url(../../assets/stadium.jpg);
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.card-signin {
+  margin: 10px;
+  margin-top: 50px;
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+.alert {
+  height: 44px;
+  text-align: center;
+}
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: all 0.2s;
+  margin-top: 40px;
+}
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+#inputUsername {
+  height: 50px;
+  font-size: large;
+}
+#inputPassword {
+  height: 50px;
+  font-size: large;
+}
+#signInBtn {
+  font-size: large;
+  height: 50px;
+}
+
+.form-label-group input {
+  padding: 3px;
+  text-align: center;
+  height: auto;
+  border-radius: 2rem;
+}

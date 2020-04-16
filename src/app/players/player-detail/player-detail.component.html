@@ -1,0 +1,58 @@
+<div class="card" style="width: 100%;">
+  <img
+    class="card-img-top"
+    [src]="player.detailImagePath"
+    alt="Card image cap"
+  />
+  <div class="card-body">
+    <h4 class="card-title" style="text-align: center;">{{ player.name }}</h4>
+    <p class="card-text" style="text-align: center;">
+      {{ player.description }}
+    </p>
+  </div>
+  <ul class="list-group list-group-flush" style="text-align: center;">
+    <li class="list-group-item">
+      Matches: &nbsp;&nbsp;<b>{{ this.player.matches }}</b>
+    </li>
+    <li class="list-group-item">
+      Role: &nbsp;&nbsp;<b>{{ this.player.position }}</b>
+    </li>
+    <li class="list-group-item" *ngIf="this.player.runs">
+      Runs: &nbsp;&nbsp;<b>{{ this.player.runs }}</b>
+    </li>
+    <li class="list-group-item" *ngIf="this.player.battingStrikeRate">
+      Batting strike rate: &nbsp;&nbsp;<b>{{
+        this.player.battingStrikeRate
+      }}</b>
+    </li>
+    <li class="list-group-item" *ngIf="this.player.wickets">
+      Wickets: &nbsp;&nbsp; <b>{{ this.player.wickets }}</b>
+    </li>
+    <li class="list-group-item" *ngIf="this.player.economyRate">
+      Bowling economy rate: &nbsp;&nbsp;
+      <b>{{ this.player.economyRate }}</b>
+    </li>
+    <li class="list-group-item" *ngIf="this.player.bowlingStrikeRate">
+      Bowling strike rate: &nbsp;&nbsp;
+      <b>{{ this.player.bowlingStrikeRate }}</b>
+    </li>
+  </ul>
+  <div class="card-body" *ngIf="isAdmin">
+    <button
+      type="button"
+      class="btn btn-large btn-block btn-primary"
+      (click)="addToTeam()"
+      [disabled]="isPresent"
+    >
+      Add to team
+    </button>
+    <button
+      type="button"
+      class="btn btn-large btn-block btn-danger"
+      (click)="removeFromTeam()"
+      [disabled]="!isPresent"
+    >
+      Remove from team
+    </button>
+  </div>
+</div>

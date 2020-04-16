@@ -1,0 +1,79 @@
+<div class="container" style="text-align: center; margin-top: 20px;">
+  <a
+    style="cursor: pointer;"
+    routerLinkActive="active"
+    class="list-group-item clearfix"
+    data-toggle="collapse"
+    href="#details{{ match.id }}"
+    role="button"
+    aria-expanded="false"
+  >
+    <span class="float-left"
+      ><img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/Cricket_India_Crest.svg/1200px-Cricket_India_Crest.svg.png"
+        alt="BCCI"
+        style="max-height: 80px;"
+    /></span>
+    <div style="max-width: 70%; display: inline-block;">
+      <h4 class="list-group-item-heading">India Vs {{ match.opposition }}</h4>
+      <p class="list-group-item-text">{{ match.match }}</p>
+    </div>
+    <span class="float-right">
+      <img
+        src="{{ match.oppositionImagePath }}"
+        alt="PCB"
+        style="max-height: 80px;"
+      />
+    </span>
+  </a>
+</div>
+<div class="container">
+  <div class="collapse" id="details{{ match.id }}">
+    <div class="card card-body" style="max-width: 100%;">
+      <div class="row">
+        <div class="col-md-5" style="margin-top: 40px;">
+          <span class="float-left"
+            ><img
+              src="{{ match.stadiumImagePath }}"
+              alt="BCCI"
+              style="max-height: 250px; min-height: 250px;"
+          /></span>
+        </div>
+        <div class="col-md-7" style="text-align: center;">
+          <table class="table table-hover">
+            <tbody>
+              <tr>
+                <th>Match</th>
+                <td>{{ match.match }}</td>
+              </tr>
+              <tr>
+                <th>Series</th>
+                <td>{{ match.series }}</td>
+              </tr>
+              <tr>
+                <th>Opposition</th>
+                <td>{{ match.opposition }}</td>
+              </tr>
+              <tr>
+                <th>Venue</th>
+                <td>{{ match.venue }}</td>
+              </tr>
+              <tr>
+                <th>Date</th>
+                <td>{{ match.venue }}</td>
+              </tr>
+              <tr>
+                <th>{{ match.happened ? "Toss" : "Time" }}</th>
+                <td>{{ match.happened ? match.toss : match.time }}</td>
+              </tr>
+              <tr>
+                <th>{{ match.happened ? "Winner" : "Umpires" }}</th>
+                <td>{{ match.happened ? match.winner : match.umpires }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

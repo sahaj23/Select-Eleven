@@ -1,0 +1,12 @@
+<br /><br />
+<h2 style="text-align: center;">Upcoming Matches</h2>
+<br /><br />
+<div class="container">
+  <app-match *ngFor="let match of matches" [match]="match"></app-match>
+</div>
+<br /><br />
+<h2 style="text-align: center;">Previous Results</h2>
+<br /><br />
+<div class="container" style="margin-bottom: 20px;">
+  <app-match *ngFor="let match of prevMatches" [match]="match"></app-match>
+</div>
