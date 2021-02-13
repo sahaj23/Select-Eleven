@@ -1,7 +1,7 @@
 # SelectEleven
 
 You can access this webapp on https://angular-http-demo-be998.web.app/login
-Authentication part is yet to be added, meanwhile we can use the following credentials for admina dn guest access:
+Authentication part is yet to be added, meanwhile we can use the following credentials for admin and guest access:
 
 Admin:
 Username: admin
